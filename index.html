@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng sự hoạt động của đèn pin</title>
+    <script src="flash_lamp.js"></script>
+</head>
+<body>
+<script>
+    let battery = new Battery();
+    battery.energy = 10;
+
+    let flashLamp = new FlashLamp();
+    flashLamp.battery = battery;
+
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+    flashLamp.light();
+
+    document.write("Turn on<br/>")
+    flashLamp.turnOn();
+    flashLamp.light();
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+    document.write("Turn off<br/>")
+    flashLamp.turnOff();
+    flashLamp.light();
+
+</script>
+</body>
+</html>
